@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup/login</title>
+    <style>
+        body {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh ;
+            padding: 10px;
+            color: white;
+        }
+        body::before {
+            content: "" ;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTckJSaoulRuL2sqQ1KVHm8XWIpX7GgOdFgHw&s);
+            background-position: center;
+            background-size: cover;
+            z-index: -1;
+        }
+        .wrapper {
+            width: 490px;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #ffffff80 ;
+            backdrop-filter: blur(8px)  ;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        h2  {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color:#fff ;
+        }
+        input {
+            position: relative;
+            border-bottom: 2px solid #ccc;
+            margin: 15px;
+        }
+        .input label {
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+            transition: 0.15s ease;
+        }
+        .input input {
+            width: 100%;
+            height: 40px;
+            color: #fff;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .forget {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 25px 35px;
+            color: #fff;
+        }
+        #remember {
+            accent-color: #fff;
+        } 
+        .forget label {
+            display: flex;
+            align-items: center;
+        }
+        .forget label p {
+            margin-left: 8px;
+        }
+        .wrapper  {
+            color: #efefef;            
+        }
+        
+        button{
+            background: #fff;
+            color: rgb(10, 0, 0);
+            font-weight: 600;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 16px;
+            border: 2px solid transparent;
+            transition: 0.3s ease;
+            
+        }
+        .forget a , p :hover {
+            text-decoration: underline;
+        }
+        #remember {
+            accent-color: #fff;
+        }
+        .forget label {
+            display: flex;
+            align-items: center;
+        }
+        .forget label p {
+            margin-left: 8px;
+        }
+        .wrapper a {
+            color: #efefef;
+            text-decoration: underline;
+        }
+        .register {
+            text-align: center;
+            margin-top: 30px;
+            color: #fff;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <h2>Welcome</h2>
+            <div class="input">
+                
+                <input type="email" required placeholder="Enter your email" id="email" >
+                 <br>
+                 
+                 <input type="password"required placeholder="Enter your password" id="password" >
+                </div>
+            <div class="forget" >
+                <a href="forget_password_codes.html" target="_blank"> Forgot password ?</a> <br>
+                <label for="remember">
+                     <p><input type="checkbox" id="remember" >  Remember me </p>
+                    
+                </label>
+                
+            </div>    
+            <button type="submit">Log in</button>
+            <div class="register" >
+                <p>Don't have an account?
+                <a href="register_codes.html" target="_blank">Register</a>
+                </p>
+            </div>
+       
+        
+        
+        </form>
+    </div>
+</body>
+</html>

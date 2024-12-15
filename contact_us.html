@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conntact us</title>
+    <style>
+         .call-form {
+        background:transparent;
+        border-radius: 10px;
+        box-shadow: 4px 4px 20px rgba(78, 198, 231, 0.5);
+        padding: 20px;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .call-form h2 {
+        color: #fbf9f9;
+        margin-bottom: 20px;
+    }
+
+    .call-form label {
+        display: block;
+        text-align: left;
+        color: #fbfbfb;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+
+    .call-form input, .call-form select, .call-form textarea, .submit_request {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        background: transparent;
+    }
+    .submit_request {
+        color: #f6f7f9;
+        cursor: pointer;
+        border-color: #f7f4f4;
+        transition: background-color 0.3s ease;
+        font-size: 30px;
+    }
+
+    
+    div{
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    body{
+        content: "" ;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXSTcsD-7SaiJpE6CV5k0qwFDYClfxNlZ6hg&s);
+            background-position: center;
+            background-size: cover;
+            z-index: -1;
+    }
+    .default{
+        color: #ddd;
+    }
+    </style>
+</head>
+<body>
+    <section class="request_call">
+        <div class="call-form" align="center">
+            <h2>Request a Call</h2>
+            <form method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="enter full name">
+    
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required placeholder="1234567890">
+    
+                <label for="time">Preferred Time</label>
+                <select id="time" name="time" required>
+                    <option class="default" value="">--Select a Time--</option>
+                    <option value="morning">Morning (9AM - 12PM)</option>
+                    <option value="afternoon">Afternoon (12PM - 3PM)</option>
+                    <option value="evening">Evening (3PM - 6PM)</option>
+                </select>
+    
+                <label for="message">Additional Message (Optional)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Any specific queries?"></textarea>
+    
+               <a target="_blank" class="submit_request" href="request_call_submit.html">submit</a>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

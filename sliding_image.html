@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Image Effect</title>
+    <style>
+        /* Style for the container */
+        .slider-container {
+            width: 100%; /* Full width of the viewport */
+            height: 500px; /* Set height to 500px */
+            overflow: hidden; /* Hide overflowed content */
+            position: relative; /* For absolute positioning of the images */
+        }
+
+        /* Style for the images wrapper */
+        .slider-images {
+            display: flex; /* Arrange images in a horizontal row */
+            /* width: 500%; Adjust to fit all images (5 images x 100%) */
+            animation: slide 50s linear infinite; /* 5 images x 10 seconds each */
+        }
+
+        /* Style for each image */
+        .slider-image {
+            width: 100vw; /* Full width of the viewport */
+            height: 500px; /* Fixed height of 500px */
+            object-fit: cover; /* Make sure image covers the container without distortion */
+            flex-shrink: 0; /* Prevent images from shrinking */
+        }
+
+        /* Define the sliding animation */
+        @keyframes slide {
+            0% {
+                transform: translateX(0); /* Show first image */
+            }
+            20% {
+                transform: translateX(0); /* Hold first image */
+            }
+            25% {
+                transform: translateX(-100vw); /* Transition to second image */
+            }
+            45% {
+                transform: translateX(-100vw); /* Hold second image */
+            }
+            50% {
+                transform: translateX(-200vw); /* Transition to third image */
+            }
+            70% {
+                transform: translateX(-200vw); /* Hold third image */
+            }
+            75% {
+                transform: translateX(-300vw); /* Transition to fourth image */
+            }
+            95% {
+                transform: translateX(-300vw); /* Hold fourth image */
+            }
+            100% {
+                transform: translateX(-400vw); /* Transition back to the first image */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider-images">
+            <img class="slider-image" src="heading.jpg" alt="Image 1">
+            <img class="slider-image" src="eduvibe.logo.png" alt="Image 2">
+            <img class="slider-image" src="eduvibe.logo.2.webp" alt="Image 3">
+            <img class="slider-image" src="eduvibe.logo.3.webp" alt="Image 4">
+            <img class="slider-image" src="image5.jpg" alt="Image 5">
+        </div>
+    </div>
+
+</body>
+</html>
